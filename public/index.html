@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banque de films</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lato&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Banque de films</h1>
+    </header>
+    <main>
+        <select id="film-select">
+
+            <!-- N'enlevez pas l'option suivante -->
+            <option disabled selected value></option>
+
+        </select>
+        <form id="film-form" novalidate>
+            <label for="code">Code IMDb</label>
+            <input type="text" id="code" name="code" required maxlength="7" minlength="7">
+            <div id="code-error" class="error"></div>
+
+            <label for="titre">Titre</label>
+            <input type="text" id="titre" name="titre" required minlength="1" maxlength="100">
+            <div id="titre-error" class="error"></div>
+
+            <label for="production">Société de production</label>
+            <input type="text" id="production" name="production" required minlength="1" maxlength="100">
+            <div id="production-error" class="error"></div>
+
+            <label for="annee">Année de publication</label>
+            <input type="number" id="annee" name="annee" required minlength="1" pattern="[0-9+]">
+            <div id="annee-error" class="error"></div>
+
+            <label for="directeur">Directeur</label>
+            <input type="text" id="directeur" name="directeur" required minlength="1" maxlength="100">
+            <div id="directeur-error" class="error"></div>
+
+            <label for="resume">Résumé</label>
+            <textarea id="resume" name="resume" required minlength="1" maxlength="1000"></textarea>
+            <div id="resume-error" class="error"></div>
+
+            <div class="border"></div>
+
+            <input type="submit" value="Ajouter" id="btn-ajouter">    
+            <input type="button" value="Vider" id="btn-vider">    
+        </form>
+        <input type="button" value="Supprimer" id="btn-supprimer">
+    </main>
+    <footer>
+        &copy; Collège La Cité
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/formToObject.js"></script>
+</body>
+</html>
