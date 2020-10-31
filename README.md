@@ -1,4 +1,4 @@
-# banque-film
+# Banque Film
 Logiciel servant à l'inscription des films regardés
 
 Languages: Js, Node.JS, HTML, CSS
