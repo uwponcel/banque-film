@@ -150,7 +150,7 @@
 
       for (let i = 0; i < listeFilms.length; i++) {
         if (listeFilms[i].code === data.code) {
-          listeFilms.slice(i, 1);
+          listeFilms.splice(i, 1);
           break;
         }
       }
